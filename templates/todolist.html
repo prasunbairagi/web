@@ -1,0 +1,65 @@
+{% extends 'base.html'%}
+
+{%block content%}
+<style>
+    table,th,td,tr{border: 2px solid black; text-align: center;}
+    table{width: 100%;}
+    td,th{height: 50px;}
+</style>
+<table id="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Name</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+            <th>Edit/Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for todo in todos%}
+        <tr>
+            <td>{{todo.title}}</td>
+            <td>{{todo.description}}</td>
+            <td>{{todo.name}}</td>
+            <td>{{todo.created_at}}</td>
+            <td>{{todo.updated_at}}</td>
+            <td>
+                <!-- todo.id is used to show the primay key at the url while deleting or updating the data -->
+                <a href="{%url 'todo:todoedit' todo.id%}"><button>update</button></a>
+                <a href="{%url 'todo:tododelete' todo.id%}"><button>delete</button></a>
+            </td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+<br>
+<button style="width:200px;height:40px;position:relative;left:40%;right:0;top:0;bottom:0;margin:auto;"><a id="downdlink" onclick="exportF(this)">Download Into excel</a></button>
+<br><br>
+    <script>
+        function exportF(elem)
+        {
+            var table=document.getElementById("table");//connecting becak to front end
+            var html=table.outerHTML;//gettong the output from html
+            var url='data:application/vnd.ms-excel,' +escape(html);//connecting url to html
+            elem.setAttribute("href",url);//accessing the url
+            elem.setAttribute("exportiii.xls");//defining the file name
+            return false;    // in case of error nothing will gate        
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%endblock%}

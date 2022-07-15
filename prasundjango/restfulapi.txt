@@ -1,0 +1,14 @@
+Rest api is different than rest framework
+API-> its an interface that defines the interaction between different software components
+WEB API-> it defines what request can be made to a component with the get request method
+RESTfull API->
+*Representational state transfer
+*standard architecture to build and communicate with webserver gateway interface (wsgi)
+ wsgi.py is wsgi->it forwards the requestd from a web server to backend Python web application
+*it requires resources on the web are represented in a text format(html,xml,json,etc)
+*Example->CRUD operations-> Creation-> models.Model(),ModelForms()
+                            Posting the data-> argument- request.POST or None
+                            Accessing the data->get_object_or_404(),objects.all()
+                            backend to front end connectivity->url(),redirect(),render()
+          
+*to check other apis visit-> https://docs.djangoproject.com/en/4.0/ref/class-based-views/

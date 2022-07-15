@@ -1,0 +1,12 @@
+1. python manage.py startapp todo <in cmd>
+2. settings.py (prasundjango) -> installed apps-> 'todo',
+3. models.py (todo app)-> created table Todo
+4. created forms.py (todo app) -> imported (from todo.models import Todo) -> created fields under class TodoForm
+5. views.py (todo app) -> created multiple functions like home,contact,etc.
+6. created urls.py (todo app) -> and made urls for views.py's function
+7. urls.py (prasundjango) -> created urls for app , home and todolist-> then add the todo urls to project urls
+8. created a folder (template) in prasundjango main folder ->created html files
+9. created account app for authentication apis also mentioned in settings.py
+10. edited views.py(account)
+11. created urls.py(account)
+12. add the account urls to project urls

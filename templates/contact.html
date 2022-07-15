@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+{%block content%}
+<style>
+    input{border-style: none;text-align: center;}
+</style>
+<!-- ************************ map ****************************** -->
+<!-- first go maps and directions info website 
+then area calculator
+ then create your map option
+ then give address and name
+ then copy html code -->
+<div style="width: 100%; height: 500px; background-image: url('https://lh3.googleusercontent.com/9zE3StG50FuHs9PCo6kMTIhWKyIc3vJ2JqxPZEgaKc8WQ2vzAyWR4wqYYhMZ7zkhc0C893COYflGKt70Sb15e4gg7eI=w640-h400-e365-rj-sc0x00ffffff');background-size:100% 100%; " class="row" >
+    <div style="width: 50%;" class="column">
+        <div style="width: 100%;"><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Rewa,Madhya%20pradesh+(PB%20MALL)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/sport-gps/">gps watches</a></iframe></div>
+
+    </div>
+    <div class="column">
+        <div style=" position: absolute; padding-top: 2%; background-color: rgb(201, 196, 196);width:25% ; height:400px;margin-left: 10%; border-radius: 10% ; " >
+        <form style="text-align: center;margin-top:50px ;"method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+            <!-- <h4 align="center">Enquiry form</h4><br><br>
+            <input type="text" placeholder="Name" class="text"><br><br>
+            <input type="text" placeholder="Email" class="text"><br><br>
+            <input type="text" placeholder="Mobile" class="text"><br><br>
+            <input type="text" placeholder="Your Query" class="text"><br><br>
+            <input style="width:56%;" type="button" class="btn btn-primary" value="Submit"> -->
+            <button style="width:56%;" class="btn btn-primary"  type="submit">Submit</button>
+        </form>
+    </div>
+    </div>
+</div>
+{%endblock%}

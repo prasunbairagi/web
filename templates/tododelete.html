@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+{%block content%}
+<form method="post">
+    {%csrf_token%}
+    <p>Are you sure?</p>
+    <p>yes i want to delete"{{todo.title}}"</p>
+    <button type="submit" name="tododelete">Delete</button>
+   
+    <!-- name=function ko call krta h -->
+
+</form>
+<a href="http://127.0.0.1:8000/todos/"><button>No,Take ME Back....</button></a>
+{%endblock%}

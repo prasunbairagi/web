@@ -1,0 +1,33 @@
+<style>
+.nv{
+background-color:crimson;}
+.nav-link{
+    color: white;
+}
+.p{
+    color: yellow;
+}
+</style>
+<nav class="navbar navbar-red  nv">
+<a class="nav-link" href="http://127.0.0.1:8000/">Home</a>
+
+<a  class="nav-link" href="http://127.0.0.1:8000/todos/">App Feedback</a>
+
+<a  class="nav-link" href="http://127.0.0.1:8000/todos/add/">Add Your Feedback</a>
+
+<a class="nav-link" href="http://127.0.0.1:8000/todos/contact/">Contact</a>
+<a class="nav-link" href="http://127.0.0.1:8000/todos/about/">About</a>
+
+<a class="nav-link" href="http://127.0.0.1:8000/account/signup/">Signup</a>
+
+<a  class="nav-link" href="http://127.0.0.1:8000/account/login/">Login</a>
+
+<div>
+{%if user.is_authenticated%}
+<p class="p">Hi, {{user.username}}!!Welcome <a href="{%url 'logout' %}">Logout</a></p>
+{%endif%}
+</div>
+
+<img width="150px" height="50px" src="https://support.livewireindia.com/tmp/images/live_wire_logo.jpg" alt="Livewirelogo">
+
+</nav>

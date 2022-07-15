@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+<form method="post">
+    <h1>Register yourself</h1>
+    {%csrf_token%}
+    <!--  it is  akind of attribute which redirect the form from backend to frontend -->
+    {{form.as_p}}
+    <button type="submit" name="signup">Signup</button>
+
+
+</form>
+{%endblock%}

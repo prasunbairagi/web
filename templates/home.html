@@ -1,0 +1,61 @@
+{% extends 'base.html'%}
+{%block content%}
+<style>
+    .butim{ height: 200px; width: 200px; background-size: 100% 100%;}
+</style>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://www.livewireindia.com/images/banner/ec-counsil-home.jpg" class="d-block w-100" height="400px" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.livewireindia.com/images/content/bg/01.jpg" class="d-block w-100" height="400px" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.livewireindia.com/images/course/partners.png" class="d-block w-100" height="400px" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <h1 align="center">Trending Courses</h1>
+  <div class="row" style="margin-left:9%; margin-right: 7%;">
+    <div class="col-xs-6 col-md-3">
+      <a href="#" class="thumbnail">
+        <button class="butim" style=" background-image:url('https://149695847.v2.pressablecdn.com/wp-content/uploads/2019/10/python-1.jpg') ;" ></button><br>        
+        </a>
+        <span style="margin-left:60px ; text-decoration: solid; font-family:Arial, Helvetica, sans-serif ; "  > Python </span>
+    </div>
+    <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail">
+          <button class="butim" style=" background-image:url('https://media.steelkiwi.com/media/filer_public_thumbnails/filer_public/67/71/6771ac15-31e4-4526-8678-e62189d44727/et1-min.png__170x240_q85_crop-smart_subsampling-2_upscale.png') ;" ></button><br>        
+          </a>
+          <span style="margin-left:60px ; text-decoration: solid; font-family:Arial, Helvetica, sans-serif ; "  > Django </span>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail">
+          <button class="butim" style=" background-image:url('https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg') ;" ></button><br>        
+          </a>
+          <span style="margin-left:60px ; text-decoration: solid; font-family:Arial, Helvetica, sans-serif ; "  > HTML5 </span>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail">
+          <button class="butim" style=" background-image:url('https://cdn.neow.in/news/images/uploaded/2018/12/1544525547_javascript_jquery_story.jpg') ;" ></button><br>        
+          </a>
+          <span style="margin-left:60px ; text-decoration: solid; font-family:Arial, Helvetica, sans-serif ; "  > Javascript </span><br>
+          <span style="margin-left:60px ; text-decoration: solid; font-family:Arial, Helvetica, sans-serif ; "  > & jquery </span>
+      </div>
+    
+  </div>
+{%endblock%}

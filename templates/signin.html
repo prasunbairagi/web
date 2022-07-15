@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<div
+    style="width: 100%; height: 500px; background-image: url('https://lh3.googleusercontent.com/9zE3StG50FuHs9PCo6kMTIhWKyIc3vJ2JqxPZEgaKc8WQ2vzAyWR4wqYYhMZ7zkhc0C893COYflGKt70Sb15e4gg7eI=w640-h400-e365-rj-sc0x00ffffff');background-size:100% 100%; ">
+<!-- absolute rakhne se wo piche wale div ko chhod dega -->
+    <div style="margin-top: 8%; position: absolute; padding-top: 2%; background-color: rgb(201, 196, 196);width:25% ; height:300px;margin-left: 38%; border-radius: 10% ; "
+        class="container">
+        <h4 align="center">Student's Login</h4><br><br>
+        <!-- <input style="border-style: none; margin-left: 20%;" type="text" placeholder="Email Address"
+            class="text"><br><br>
+        <input style="border-style: none; margin-left: 20%;" type="password" placeholder="Password"
+            class="text"><br><br> -->
+            <form method="post">
+                {%csrf_token%}
+                {{form.as_p}}
+                <button style="margin-left: 20%;width: 58%;" class="btn btn-primary" type="submit" name="login">Signin</button>
+            </form>
+       
+    <br><a style="margin-left: 22%;text-decoration: none; color: black;" href="http://127.0.0.1:8000/todos/signup">Not registered? Sign Up</a>
+    </div>
+</div>
+{%endblock%}
